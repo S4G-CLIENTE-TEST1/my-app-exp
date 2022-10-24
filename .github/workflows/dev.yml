@@ -3,7 +3,7 @@ name: TestCICD Pipeline
 on:
   push:
     branches:    
-      - 'dev'         # matches every branch that doesn't contain a '/'
+      - '*'         # matches every branch that doesn't contain a '/'
       - '!main'   # excludes master
 jobs:
   variables:
