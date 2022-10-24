@@ -2,7 +2,8 @@
 name: TestCICD Pipeline
 on:
   push:
-    branches: [dev]
+    branches:
+      - dev
 jobs:
   variables:
     runs-on: ubuntu-latest
