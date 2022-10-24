@@ -1,4 +1,3 @@
-dorgvbjwetoigjwtorigjroiierigjgoiwertogjrtweoibjrtieoretyrfheyrtreijoergjoergiwergioerbwrtoibjwiortrtgwerttrwaaaii-Colaboradores:
-revwvrv
+Colaboradores:
 
 - [X] Joaquin Ramirez Letran
