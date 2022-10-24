@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a01c8651-f282-43cc-ad8d-86e0b5f8e52e" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="my-app-exp-flow" doc:id="207f7e5b-95eb-4688-a0c9-8df4b89827f0" >
+		<http:listener doc:name="Listener" doc:id="b1b49086-2420-4088-bcb6-d91689ff38d5" config-ref="HTTP_Listener_config" path="/my-app-exp"/>
+		<logger level="INFO" doc:name="Inicio Proceso" doc:id="06fbc73e-4dca-464e-b013-8c9944f86c9b" message="Inicio Proceso"/>
+		<set-payload value='#[%dw 2.0&#10;output application/json&#10;---&#10;{&#10;	"test":&#10;	 {&#10;	 	"aplicacion": flow.name&#10;	 }&#10;}]' doc:name="Set Payload" doc:id="3ef90441-e7a8-49e3-9a30-f6dd8838fe35" />
+		<logger level="INFO" doc:name="Fin Proceso" doc:id="75e85c0a-9221-4b07-80bf-9f17f716e8c5" message="Fin Proceso"/>
+	</flow>
+</mule>
