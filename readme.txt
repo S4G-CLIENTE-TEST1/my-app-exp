@@ -1,3 +1,3 @@
-Colaboradores:
+sorjlaboradores:
 
 - [X] Joaquin Ramirez Letran
