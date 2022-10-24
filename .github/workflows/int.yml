@@ -3,7 +3,7 @@ name: TestCICD Pipeline
 on:
   push:
     branches:
-      - feature/int
+      - feature/*
 jobs:
   variables:
     runs-on: ubuntu-latest
